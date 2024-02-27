@@ -1,0 +1,15 @@
+.container{
+    flex: 5;
+}
+
+.title{
+    margin: 50px 0px;
+    font-size: 26px;
+}
+
+@media screen and (max-width: 640px){
+    .title{
+        font-size: 22px;
+        margin: 30px 0px;
+    }
+}

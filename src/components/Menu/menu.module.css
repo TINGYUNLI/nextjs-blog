@@ -1,0 +1,20 @@
+.container{
+    flex: 2;
+    margin-top: 60px;
+}
+
+.subtitle{
+    color: gray;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.title{
+    font-size: 22px;
+}
+
+@media screen and (max-width: 1040px) {
+    .container{
+        display: none;
+    }
+}

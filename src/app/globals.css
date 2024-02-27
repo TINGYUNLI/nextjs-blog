@@ -1,6 +1,8 @@
 :root {
   --bg: white;
   --textColor: black;
+  --softBg: #f0f0f0;
+  --softTextColor: #626262;
 }
 
 * {
@@ -31,7 +33,20 @@ a {
   margin-right: auto;
   padding-left: 80px;
   padding-right: 80px;
-  word-wrap: break-word;
+}
+
+.dark{
+  --bg: black;
+  --textColor: white;
+  --softBg: #1f273a;
+  --softTextColor: #a6a6a6;
+}
+
+.light{
+  --bg: white;
+  --textColor: black;
+  --softBg: #f0f0f0;
+  --softTextColor: #626262;
 }
 
 @media screen and (max-width: 1536px) {
@@ -60,4 +75,12 @@ a {
   .wrapper {
     max-width: 475px;
   }
+}
+
+.ql-container{
+  font-size: 28px !important;
+}
+
+.quill > .ql-container > .ql-editor.ql-blank::before{
+  color: #b3b3b1;
 }
