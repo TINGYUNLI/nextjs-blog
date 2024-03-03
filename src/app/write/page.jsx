@@ -3,7 +3,8 @@
 import styles from "./write.module.css";
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import ReactQuill from "react-quill";
+import dynamic from "next/dynamic"; // Import dynamic from 'next/dynamic'
+// import ReactQuill from "react-quill";
 import "react-quill/dist/quill.bubble.css";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
@@ -17,6 +18,10 @@ import {
 import { app } from "@/utils/firebase";
 
 const storage = getStorage(app);
+
+const ReactQuill = dynamic(() => import("react-quill"), {
+  ssr: false,
+});
 
 const WritePage = () => {
   const { status } = useSession();
@@ -32,13 +37,16 @@ const WritePage = () => {
   const [imageFileUrl, setImageFileUrl] = useState(null);
 
   const handleImageChange = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      setFile(e.target.files[0]);
-      setImageFile(file);
-      setImageFileUrl(URL.createObjectURL(file));
+    if (typeof window !== "undefined") {
+      const file = e.target.files[0];
+      if (file) {
+        setFile(e.target.files[0]);
+        setImageFile(file);
+        setImageFileUrl(URL.createObjectURL(file));
+      }
     }
   };
+
   console.log(imageFile, imageFileUrl);
 
   useEffect(() => {
