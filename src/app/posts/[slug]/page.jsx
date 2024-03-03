@@ -5,9 +5,12 @@ import Menu from "@/components/Menu/Menu";
 import Comments from "@/components/Comments/Comments";
 
 const getData = async (slug) => {
-  const res = await fetch(`http://localhost:3000/api/posts/${slug}`, {
-    cache: "no-store",
-  });
+  const res = await fetch(
+    `https://nextjs-blog-ten-psi-28.vercel.app/api/posts/${slug}`,
+    {
+      cache: "no-store",
+    }
+  );
   if (!res.ok) {
     throw new Error("Failed");
   }
