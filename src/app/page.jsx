@@ -4,14 +4,17 @@ import CategoryList from "@/components/CategoryList/CategoryList";
 import CardList from "@/components/CardList/CardList";
 import Menu from "@/components/Menu/Menu";
 
-export default function Home() {
+export default function Home({ searchParams }) {
+  const page = parseInt(searchParams.page) || 1;
+  console.log(page);
+
   return (
     <div className={styles.container}>
-      <Featured/>
-      <CategoryList/>
+      <Featured />
+      <CategoryList />
       <div className={styles.content}>
-        <CardList/>
-        <Menu/>
+        <CardList page={page} />
+        <Menu />
       </div>
     </div>
   );

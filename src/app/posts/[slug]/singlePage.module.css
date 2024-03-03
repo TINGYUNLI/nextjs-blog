@@ -4,15 +4,22 @@
     display: flex;
     align-items: center;
     gap: 50px;
+    flex-wrap: wrap;
 }
 
 .textContainer{
     flex: 1;
 }
 
-.title{
-    font-size: 64px;
+.blogTitle{
+    font-size: 50px;
     margin-bottom: 50px;
+}
+
+.blogInfo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .user{

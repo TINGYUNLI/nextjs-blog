@@ -2,6 +2,28 @@
 
 }
 
+.infoContainer{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.textContainer{
+    flex:2;
+    display: flex;
+    align-items: center;
+}
+
+.imageContainer{
+    flex:2;
+    height: 350px;
+    position: relative;
+}
+
+.image{
+    object-fit: cover;
+}
+
 .editor{
     display: flex;
     gap: 20px;
@@ -38,10 +60,13 @@
 
 .input{
     padding: 50px;
-    font-size: 64px;
+    font-size: 56px;
     border: none;
     outline: none;
     background-color: transparent;
+    color: var(--textColor);
+    width: 100%;
+    height: flex;
 }
 
 .input::placeholder{
