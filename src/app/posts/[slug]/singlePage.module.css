@@ -78,13 +78,13 @@
 }
 
 @media screen and (max-width: 1536px) {
-    .title{
+    .blogTitle{
         font-size: 54px;
     }
 }
 
 @media screen and (max-width: 1280px) {
-    .title{
+    .blogTitle{
         font-size: 48px;
     }
 }
@@ -96,10 +96,28 @@
 }
 
 @media screen and (max-width: 640px) {
-    .title{
-        font-size: 36px;
+    .blogTitle{
+        font-size: 25px;
+        margin-bottom: 20px;
     }
     .description p{
         font-size: 18px;
     }
+    .username{
+        font-size: 15px;
+    }
+    .date{
+        font-size: 13px;
+    }
+    .post{
+        margin-top: 40px;
+    }
+    .userImageContainer{
+        width: 40px;
+        height: 40px;
+    }
+    .blogInfo{
+        font-size: 13px;
+    }
+
 }

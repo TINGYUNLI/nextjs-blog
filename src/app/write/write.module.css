@@ -118,4 +118,7 @@
         right: 30px;
         top: auto;
     }
+    .imageContainer{
+        height: 250px;
+    }
 }

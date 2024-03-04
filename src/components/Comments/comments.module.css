@@ -68,3 +68,33 @@
     font-size: 18px;
     font-weight: 300;
 }
+
+@media screen and (max-width: 640px) {
+    .title{
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    .write{
+        gap: 10px;
+    }
+    .button{
+        font-size: 12px;
+        padding: 10px 15px;
+    }
+    .image{
+        width: 40px;
+        height: 40px;
+    }
+    .username{
+        font-size: 15px;
+    }
+    .date{
+        font-size: 13px;
+    }
+    .comment{
+        margin-bottom: 30px;
+    }
+    .description{
+        font-size: 15px;
+    }
+}

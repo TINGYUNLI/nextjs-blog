@@ -99,19 +99,24 @@ const WritePage = () => {
       .replace(/^-+|-+$/g, "");
 
   const handleSubmit = async () => {
+    const slugValue = slugify(title);
     const res = await fetch("/api/posts", {
       method: "POST",
       body: JSON.stringify({
         title,
         desc: value,
         img: media,
-        slug: slugify(title),
+        slug: slugValue,
         catSlug: "travel",
       }),
     });
 
-    console.log(res);
-    router.push("/");
+    if (res.ok) {
+      console.log("Post successful");
+      router.push(`/posts/${slugValue}`);
+    } else {
+      console.error("Failed to post");
+    }
   };
 
   return (
