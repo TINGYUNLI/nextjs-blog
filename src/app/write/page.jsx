@@ -132,30 +132,32 @@ const WritePage = () => {
         )}
       </div>
       <div className={styles.editor}>
-        <button className={styles.button} onClick={() => setOpen(!open)}>
-          <Image src="/plus.png" alt="" width={16} height={16} />
-        </button>
-        {open && (
-          <div className={styles.add}>
-            <input
-              type="file"
-              id="image"
-              onChange={(e) => handleImageChange(e)}
-              style={{ display: "none" }}
-            />
-            <button className={styles.addButton}>
-              <label htmlFor="image">
-                <Image src="/image.png" alt="" width={16} height={16} />
-              </label>
-            </button>
-            <button className={styles.addButton}>
-              <Image src="/external.png" alt="" width={16} height={16} />
-            </button>
-            <button className={styles.addButton}>
-              <Image src="/video.png" alt="" width={16} height={16} />
-            </button>
-          </div>
-        )}
+        <div className={styles.mediaButton}>
+          <button className={styles.button} onClick={() => setOpen(!open)}>
+            <Image src="/plus.png" alt="" width={16} height={16} />
+          </button>
+          {open && (
+            <div className={styles.add}>
+              <input
+                type="file"
+                id="image"
+                onChange={(e) => handleImageChange(e)}
+                style={{ display: "none" }}
+              />
+              <button className={styles.addButton}>
+                <label htmlFor="image">
+                  <Image src="/image.png" alt="" width={16} height={16} />
+                </label>
+              </button>
+              <button className={styles.addButton}>
+                <Image src="/external.png" alt="" width={16} height={16} />
+              </button>
+              <button className={styles.addButton}>
+                <Image src="/video.png" alt="" width={16} height={16} />
+              </button>
+            </div>
+          )}
+        </div>
         <ReactQuill
           className={styles.textArea}
           theme="bubble"

@@ -25,10 +25,15 @@
 }
 
 .editor{
-    display: flex;
+    /* display: flex; */
     gap: 20px;
     height: 700px;
     position: relative;
+}
+
+.mediaButton{
+    display: flex;
+    margin-bottom: 10px;
 }
 
 .button,
@@ -55,7 +60,7 @@
     position: absolute;
     z-index: 999;
     width: 100%;
-    left: 50px;
+    left: 60px;
 }
 
 .input{
@@ -87,4 +92,30 @@
     color: white;
     cursor: pointer;
     border-radius: 20px;
+}
+
+@media screen and (max-width: 640px) {
+    .infoContainer{
+        display: block;
+        margin-bottom: 20px;
+    }
+    .input{
+        font-size: 50px;
+        padding: 15px;
+    }
+    .editor{
+        display: block;
+        position: relative;
+    }
+    .mediaButton{
+        display: flex;
+        left: 60px;
+        margin-bottom: 10px;
+    }
+    .publish{
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        top: auto;
+    }
 }
